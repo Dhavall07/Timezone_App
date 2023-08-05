@@ -48,7 +48,7 @@ export default function Image(props) {
   const getCityImage = () => {
     axios({
       method: "GET",
-      url: `https://api.unsplash.com/search/photos?query=${props.cityName}&client_id=nI-EqkPr7aLgCblXmt9x6Et6KFKVBcUe0-606VyHARU`,
+      url: `https://api.unsplash.com/search/photos?query=${props.cityName}&client_id=`,
     }).then((response) => {
       console.log(response.data);
       setImage(response.data.results[0].urls.full);
