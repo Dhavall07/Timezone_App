@@ -29,8 +29,8 @@ export default function Details(props) {
   const getCityDetails = () => {
     axios({
       method: "GET",
-      url: `https://www.triposo.com/api/20210615/location.json?id=${props.cityName}&account=RQ7XAWY7&token=hezd37kfv5jrk2dh9crc416f6azrs9vp`,
-      //     url: `https://www.triposo.com/api/20210615/tour.json?annotate=trigram:London&trigram=>0.2&account=RQ7XAWY7&token=hezd37kfv5jrk2dh9crc416f6azrs9vp`,
+      url: `https://www.triposo.com/api/20210615/location.json?id=${props.cityName}&account=`,
+      //     url: `https://www.triposo.com/api/20210615/tour.json?annotate=trigram:London&trigram=>0.2&account=`,
     }).then((response) => {
       console.log(response.data);
       setCityDetails(response.data.results[0].id);
@@ -43,7 +43,7 @@ export default function Details(props) {
   const getCityDetails1 = () => {
     axios({
       method: "GET",
-      url: `https://www.triposo.com/api/20210615/tour.json?annotate=trigram:${props.cityName}&trigram=>0.2&account=RQ7XAWY7&token=hezd37kfv5jrk2dh9crc416f6azrs9vp`,
+      url: `https://www.triposo.com/api/20210615/tour.json?annotate=trigram:${props.cityName}&trigram=>0.2&account=`,
     }).then((response) => {
       console.log(response.data);
       setp1(response.data.results[1].name);
