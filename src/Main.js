@@ -22,7 +22,7 @@ export default function Main() {
   const getCityData = (city) => {
     axios({
       method: "GET",
-      url: `https://timezoneapi.io/api/timezone/?Europe/${city}&token=alavYhpTLzfSjnBWKmtc`,
+      url: `https://timezoneapi.io/api/timezone/?Europe/${city}&token=`,
     }).then((response) => {
       console.log(response.data);
       setLoc(response.data.data.timezone.location);
